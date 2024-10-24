@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carro de Compras - Simple.co</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/estilos.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h2>Carro de Compras</h2>
+          </div>
+          <div class="card-body">
+            <!-- Item 1 -->
+            <div class="row align-items-center mb-3 item" data-price="44000" data-producto="Polera Burdeo">
+              <div class="col-3">
+                <img src="./assets/images/burdeo.jpg" alt="Polera Burdeo" class="img-fluid rounded">
+              </div>
+              <div class="col-5">
+                <p class="producto fw-bold">Polera</p>
+                <p class="color text-muted">Color Burdeo</p>
+              </div>
+              <div class="col-2">
+                <input type="number" value="0" min="0" class="form-control cantidad">
+              </div>
+              <div class="col-2 text-end">
+                <p class="precio-item">$0</p>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="row align-items-center mb-3 item" data-price="44000" data-producto="Polera Gris">
+              <div class="col-3">
+                <img src="./assets/images/gris.jpg" alt="Polera Gris" class="img-fluid rounded">
+              </div>
+              <div class="col-5">
+                <p class="producto fw-bold">Polera</p>
+                <p class="color text-muted">Color Gris</p>
+              </div>
+              <div class="col-2">
+                <input type="number" value="0" min="0" class="form-control cantidad">
+              </div>
+              <div class="col-2 text-end">
+                <p class="precio-item">$0</p>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="row align-items-center mb-3 item" data-price="44000" data-producto="Polera Negro">
+              <div class="col-3">
+                <img src="./assets/images/negro.jpg" alt="Polera Negro" class="img-fluid rounded">
+              </div>
+              <div class="col-5">
+                <p class="producto fw-bold">Polera</p>
+                <p class="color text-muted">Color Negro</p>
+              </div>
+              <div class="col-2">
+                <input type="number" value="0" min="0" class="form-control cantidad">
+              </div>
+              <div class="col-2 text-end">
+                <p class="precio-item">$0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resumen y Boleta -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h2>Resumen de la Compra</h2>
+          </div>
+          <div class="card-body">
+            <p id="articulos">0 artículos <span>$0</span></p>
+            <p>Envío <span>$0</span></p>
+            <div class="mb-3">
+              <label for="codigo-descuento" class="form-label">Código de Descuento</label>
+              <input type="text" class="form-control" id="codigo-descuento" placeholder="Ingresa tu código">
+            </div>
+            <button id="aplicar-descuento" class="btn btn-danger w-100 mb-3">Aplicar Descuento</button>
+            <p id="estado-descuento"></p>
+            <p>Precio Total <span id="precio-total">$0</span></p>
+            <button class="btn btn-primary w-100 mb-3 realizar-compra">Realizar Compra</button>
+            <button class="btn btn-secondary w-100 limpiar-carrito">Limpiar Carrito</button>
+          </div>
+        </div>
+        <div class="card boleta" style="display: none;">
+          <div class="card-header">
+            <h2>Detalle de la Compra (Boleta)</h2>
+          </div>
+          <div class="card-body" id="detalle-boleta"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/logica.js"></script>
+</body>
+</html>
